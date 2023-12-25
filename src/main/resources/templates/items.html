@@ -1,0 +1,9 @@
+{#include layout}
+    {#title}Item List{/title}
+    {#body }
+        <h1>All Items</h1>
+        {#for item in items}
+        <li>{item.name}</li>
+        {/for}
+    {/body}
+{/include}

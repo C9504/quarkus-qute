@@ -1,0 +1,20 @@
+{#include layout}
+{#title}Add new Item{/title}
+{#body}
+<h1>Create new Item</h1>
+<form action="/items/create" method="post">
+    <label>Item: </label>
+    <input type="text" name="name" value="{item.name}" required>
+
+    <label>Description: </label>
+    <input type="text" name="description" value="Not description" required>
+
+    <button type="submit">Save item</button>
+</form>
+<br>
+<br>
+{#if created }
+{item.name}
+{/if}
+{/body}
+{/include}
