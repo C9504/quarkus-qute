@@ -27,14 +27,14 @@ public class WelcomeResourceTest {
                 .get("/welcome")
                 .then()
                 .statusCode(200)
-                .body(is("Hello, Welcome to Quarkus Test Example"));
+                .body(is("Hello, Welcome to Quarkus Qute Example"));
     }
 
     @Test
     public void testHttpWelcome() throws IOException {
         try (InputStream is = url.openStream()) {
             String contents = new String(is.readAllBytes(), StandardCharsets.UTF_8);
-            Assertions.assertEquals("Hello, Welcome to Quarkus Test Example", contents);
+            Assertions.assertEquals("Hello, Welcome to Quarkus Qute Example", contents);
         }
     }
 

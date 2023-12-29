@@ -8,13 +8,16 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
-@Path("/welcome")
-public class WelcomeResource {
+@Path("/")
+public class MainResource {
+
+    @Inject
+    Template index;
 
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String hello() {
-        return "Hello, Welcome to Quarkus Qute Example";
+    @Produces(MediaType.TEXT_HTML)
+    public TemplateInstance welcome() {
+        return index.instance();
     }
 
 }
