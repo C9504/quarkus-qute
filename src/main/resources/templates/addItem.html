@@ -16,5 +16,12 @@
 {#if created }
 {item.name}
 {/if}
+
+<br>
+<br>
+<h1>All Items</h1>
+{#for item in items}
+<li>{item.name} <i>{item.description}</i></li>
+{/for}
 {/body}
 {/include}
